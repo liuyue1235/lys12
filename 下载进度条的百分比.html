@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<script>
+		
+	
+			
+			
+			onload=function(){
+				
+					var per=document.getElementById("jd");
+					var ber=document.getElementById("shuzi");
+					var num=0;
+					var a=0;
+					var time=setInterval(function(){
+						num+=1;
+						a++;
+						ber.innerHTML=a;
+						
+						if(num==100){
+							clearInterval(time);
+							alert("下载完毕");
+						}
+						var perp=per.style.width=num+"px";
+					},100);
+				
+		
+	
+			}	
+			
+		</script>
+		
+		
+		
+		
+		
+		
+		
+		
+		<style>
+			#wai{width: 100px;height: 10px;border:1px solid red;}
+			#jd{width: 0px ;height: 10px;background: red;}
+		</style>
+	</head>
+	<body>
+		<div id="wai"><div id="jd"></div></div>
+		<div><span id="shuzi">0</span>%</div>
+		<input type="button" value="点击下载"  id="kkk" onclick="xiazai()"/>
+	</body>
+</html>
